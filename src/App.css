@@ -1,0 +1,209 @@
+main {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+body {
+    cursor: none;
+}
+
+.inicio {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 20%;
+    margin-top: 15px;
+    text-align: center;
+}
+
+.btn {
+    background-color: #09f;
+    padding: 10px;
+    border: none;
+    border-radius: 20px;
+}
+
+.func {
+    display: flex;
+    margin: 15px 0;
+}
+
+.btn:first-child:hover {
+    background-color: red !important;
+}
+
+.btn:last-child:hover {
+    background-color: green;
+}
+
+.tablero {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    place-content: center;
+    /* display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  width: 600px;
+  height: 600px;
+  justify-content: center;
+
+  align-items: center;
+  align-content: stretch; */
+}
+
+.casilla {
+    border: 1px solid white;
+    font-size: 6rem;
+    display: flex;
+    flex-wrap: wrap;
+    width: 150px;
+    height: 150px;
+    justify-content: center;
+    align-content: stretch;
+    color: #09f;
+}
+
+
+
+
+.desactivar {
+    display: none;
+}
+
+main {
+    position: relative;
+}
+
+.winner {
+    position: absolute;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 100;
+    display: flex;
+    flex-direction: column;
+    height: 300px;
+    width: 300px;
+    top: 50%;
+    /* Posiciona en el centro verticalmente */
+    left: 50%;
+    /* Posiciona en el centro horizontalmente */
+    transform: translate(-50%, -50%);
+    /* Centra el contenido */
+    justify-content: center;
+    align-items: center;
+    border: 1px solid white;
+    text-align: center;
+
+}
+
+.btn-reiniciar {
+    background-color: transparent;
+    border: none;
+    width: 30px;
+    height: 30px;
+}
+
+.btn-reiniciar img {
+    width: 100%;
+    animation: rotar 5s linear infinite;
+}
+
+.btn-reiniciar:hover img {
+    cursor: pointer;
+    transform: rotar;
+    transition: 0.5s ease-in-out all;
+    animation: rotar 5s linear infinite;
+    scale: 1.1;
+}
+
+@keyframes rotar {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.no-func .btn {
+    pointer-events: none;
+}
+
+
+.contenedor-reiniciar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.tablero-lista {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 25px;
+}
+
+.contenedor-turnos {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 25px;
+}
+
+
+.selection {
+    background-color: #09f;
+
+
+}
+
+
+
+
+
+
+
+@media(max-width: 600px) {
+    .tablero {
+        width: 300px;
+        height: 300px;
+    }
+
+    .casilla {
+        width: 90px;
+        height: 90px;
+        font-size: 3rem;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.coneccion {
+    display: grid;
+
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    gap: 15px;
+    place-content: center;
+}
+
+.padre {
+    position: relative;
+}
